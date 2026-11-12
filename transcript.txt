@@ -1,0 +1,372 @@
+0.1s: This is Patrick Nill. For most of his
+3.3s: life, he was a bookbinder. He ran his
+5.6s: family company in a small town in
+7.2s: Germany, working 16 hours a day. Then in
+10.5s: 2018, he sold everything to become a
+13.2s: full-time trader. His parents said he
+15.8s: was going to the casino. His friends
+17.8s: called it gambling.
+19.3s: One year later, his name was on the
+21.4s: leaderboard of the Robbins World Cup,
+23.9s: the oldest and most famous trading
+26.2s: competition on the planet.
+28.3s: And he never left. Patrick has finished
+31.0s: in the top five of that competition 12
+33.9s: times. This year, he is in first place
+37.0s: with a return of around 300%.
+40.2s: Yes, you heard me right, 300%.
+43.5s: That's insane. And here's the part that
+46.1s: nobody expects. Patrick does not sit in
+48.6s: front of six screens all day. He says
+51.1s: one hour in the morning is enough. He
+53.5s: looks at the chart, places his one or
+55.7s: two trades, and the day is over.
+58.5s: Sometimes he does it from his phone
+60.1s: while traveling because the strategy
+62.6s: that made him a world champion is
+64.5s: incredibly simple, simple enough that
+67.2s: anyone can understand it. It's built on
+69.6s: one single idea about how markets move.
+72.8s: And once you see it, you can't unsee it.
+75.6s: Now, if you're like me, you're thinking,
+77.6s: how does he do it? Well, I decided to
+80.1s: look for the answer. I went through
+82.0s: every interview Patrick has ever given,
+84.7s: hours and hours of him drawing on charts
+87.6s: and explaining his model. And I have to
+89.6s: say, this man is a genius of simplicity.
+93.4s: I condensed everything into this video,
+95.5s: and I'm giving it to you for free. So if
+97.8s: this adds value to your trading, hit
+99.6s: that like button and drop a thank you in
+101.3s: the comments. It really helps the
+102.7s: channel grow. Let's get straight to it.
+105.4s: Before we go to the strategy itself, you
+107.7s: need to understand the three principles
+109.8s: Patrick built his entire career on. The
+112.7s: first principle is this. Markets spend
+115.4s: about 70% of the time in ranges and only
+118.4s: 20 or 30% of the in trends. And there's
+121.9s: a reason for it. Big players need
+124.3s: liquidity to fill their orders. Inside a
+126.8s: range, they can do that. When the
+128.8s: liquidity dries up, they push price to
+131.3s: one side toward the next pool of
+133.4s: liquidity and a new range forms there.
+136.1s: So the job of a trader is not to
+138.4s: predict. The job is to move from one
+141.0s: area of fair value to the next one.
+143.7s: The second principle is the one Patrick
+145.6s: calls his biggest rule. You never move
+148.5s: your stop loss to give the trade more
+150.8s: room. Never. When you're nervous and
+153.6s: price comes close to your stop, you want
+155.8s: to push it a bit further away. Patrick
+158.1s: says that the moment you do this, you
+160.1s: cannot be profitable anymore. It's a red
+162.7s: flag. He learned this the hard way.
+165.5s: During COVID, oil kept failing. When it
+168.5s: was around $12 or $13 a barrel, Patrick
+171.4s: and his team thought it was way too
+173.1s: cheap. For years, it had cost 10 times
+175.9s: that, so it had to go back up. They
+178.4s: bought. When it fell to 10 and then to
+181.3s: eight, they bought more. At five, they
+184.0s: bought again. They were breaking all of
+186.6s: their own rules, but they thought it was
+188.6s: the deal of a lifetime. Then they
+190.6s: stopped for a second and asked
+192.1s: themselves what the real risk was. They
+194.9s: closed everything that same day and
+196.8s: pulled the plug. That night, oil went to
+199.4s: -$40.
+201.5s: Nobody knew oil could go negative.
+203.9s: They had calculated a maximum risk of a
+206.2s: few thousand dollars per contract. The
+208.9s: real risk was almost 10 times that.
+212.3s: Since that day, Patrick's stop loss is
+214.9s: untouchable. And the third principle
+217.3s: follows from the second. You decide the
+219.4s: stop loss first based on the structure
+221.8s: of the market. Only after that you
+224.3s: decide how many contracts to trade.
+226.8s: Sometimes the stop is small, sometimes
+229.2s: it is big, and the position size adapts
+231.7s: to the stop, never the other way around.
+234.8s: Now that the foundations are clear,
+236.3s: let's see how Patrick actually reads a
+238.6s: chart. Everything in Patrick's model
+241.0s: starts with two letters, P and B. A P is
+244.9s: a strong move up followed by a range. A
+247.8s: B is a strong move down followed by a
+250.3s: range. That's it. You wait for the push
+253.1s: and after the push almost every time
+255.9s: price starts moving sideways. That range
+258.9s: is Patrick's playground. The time frame
+261.5s: where he makes his decisions is the
+263.1s: 15-minute chart. He uses the 4-hour
+265.6s: chart to get the big picture and
+267.4s: sometimes he drops to the 5 or 3-minute
+269.7s: chart only to execute with more
+271.4s: precision, but the decision is always
+273.9s: made on the 15-minute.
+275.8s: Now here's a question every trader gets
+278.3s: wrong. When does a range become a valid
+281.8s: range?
+282.9s: Patrick waits for three confirmations,
+285.5s: three touches of the zone. You could
+288.2s: call it a P much earlier after one or
+290.9s: two touches, but Patrick waits very long
+294.2s: on purpose because the longer the range,
+296.7s: the higher the probability that the
+298.2s: breakout actually works. Sometimes this
+301.1s: means he misses the move completely.
+303.3s: He's fine with that.
+304.7s: On a 15-minute chart, a good P needs at
+307.2s: least half a day to form, often a full
+310.1s: day. So we are not talking about 20
+312.7s: trades a day. We're talking about one or
+315.1s: two good setups. And before drawing the
+318.0s: zones, when Patrick is at his desk, he
+320.5s: looks at the market profile and the
+322.1s: volume profile of the week. The value
+324.7s: area high and the value area low tell
+327.2s: him where the market is in balance and
+329.4s: where price will move fast because
+331.6s: there's almost no volume. If a P or a B
+334.9s: forms exactly on one of those levels,
+337.5s: the setup is much stronger.
+339.9s: Once you have a valid range, there are
+341.5s: three ways to trade it and Patrick uses
+344.3s: all three. The first one is the range
+346.9s: trade. You place a limit order at the
+348.9s: bottom of the zone and target the top or
+351.5s: you sell the top and target the bottom.
+353.9s: No partials, just in and out.
+356.6s: Patrick loves it when two ranges sit at
+358.7s: the same price level because he says
+360.6s: they simply work better. He does not
+362.9s: open range trades when the P is
+364.5s: completed in the evening because 8 hours
+366.8s: without seeing the market is too long.
+369.4s: The second one is the breakout with
+371.2s: confirmation. Patrick does not buy the
+373.4s: first candle that leaves the range. Too
+375.7s: many breakouts are fake. He waits for a
+378.3s: candle to close outside the zone, then
+380.6s: price comes back to test the edge of the
+382.7s: zone, and the next candle closes beyond
+385.4s: the breakout candle. That is his
+387.5s: confirmation. On the downside, it is the
+390.1s: same logic, a new low, a pullback, and
+392.9s: then the break of that low. Only then he
+395.3s: enters, usually with a limit order.
+398.1s: The third one is his favorite trade in
+399.9s: the world. Price breaks below the range.
+402.9s: The sellers push, but they do not have
+405.0s: enough power. Price comes back inside
+407.6s: the zone. Patrick goes long right there.
+410.8s: The stop is tiny, just below the low of
+413.9s: the fake breakout, and the potential is
+416.2s: huge because when the market wanted to
+418.4s: go down and failed, it often moves up
+421.2s: with force. In this case, he does not
+423.8s: stop at the top of the range. He holds.
+426.6s: He prefers this setup on the long side.
+429.0s: The mirror image of fake breakout above
+431.3s: the range and a return inside, he trades
+434.0s: much less because when there is power to
+436.3s: the upside, more power usually comes.
+439.5s: With the entries clear, let's talk about
+441.5s: where the trade ends. The stop loss goes
+444.5s: below a structural low, below the zone,
+447.4s: or on a level of the market profile. If
+450.0s: there is nothing to lean on, Patrick
+452.0s: calculates it from the target. If the
+453.9s: target is far away, he accepts a wider
+456.6s: stop as long as the risk-to-reward stays
+459.2s: above three. And as the trade moves in
+461.8s: your favor and new ranges form, you move
+464.4s: the stop below each new P, up and up,
+468.0s: under every new area of fair value.
+471.1s: For the targets, Patrick trades from
+473.1s: fair value to fair value. If there's a
+475.2s: previous range above or below, that's
+477.7s: the target. When he has several
+479.2s: contracts, he takes the first partial at
+481.6s: the edge of the closest zone, decides
+484.1s: the second one on the spot, and leaves
+486.3s: the last contract for the origin of the
+488.4s: whole move. He usually works with
+490.5s: multiples of three contracts for this
+492.4s: reason.
+493.5s: What if the market is at an all-time
+495.3s: high and there is no previous fair
+497.6s: value? Then he measures the size of the
+500.1s: initial impulse and projects it forward,
+502.8s: one to one.
+504.1s: And one last detail that makes a big
+505.8s: difference. Small ranges after a big
+508.3s: move are perfect for breakouts. The stop
+511.4s: is close, the target is far, and you can
+514.3s: get a risk-to-reward of eight or more.
+517.2s: Big ranges are perfect for range
+519.2s: trading, but terrible for breakouts
+521.6s: because the stop would be way too far.
+524.3s: Now, before we go to the chart and trade
+526.0s: this live, there is something you need
+527.9s: to know. The hardest part of Patrick's
+530.0s: strategy is not the entry. It's drawing
+533.1s: the range right. Too early and you trade
+535.6s: a range that's not finished. Too late
+538.0s: and the move is already gone. Patrick
+540.3s: himself admits that his exact rules for
+543.0s: drawing and resizing the zones are the
+545.5s: one thing he does not share. If you want
+547.8s: help with that part, there's a free
+549.3s: indicator on TradingView called
+551.0s: Consolidation Zones Volume Delta by Flux
+554.0s: Charts. It finds the sideways areas
+556.5s: after a strong push and draws the box
+558.9s: for you. It also shows how buying and
+561.2s: selling volume builds up inside each
+563.4s: range so you can see which side is in
+565.6s: control before the breakout comes. And
+568.3s: if you want to go one step further, Flux
+570.3s: Charts also has a paid tool, the Price
+572.7s: Action Toolkit. It shows you market
+574.7s: structure, liquidity grabs below and
+577.1s: above the range, and key levels from
+579.4s: higher time frames, all on one chart. If
+581.9s: you decide to try it, use this code for
+583.8s: 20% off. You'll find the link in my
+585.8s: description. All right, let's get back
+587.5s: to the video.
+588.9s: Let's put everything on a real chart and
+590.9s: trade it the way Patrick does. First
+593.0s: things first, open TradingView. If you
+594.9s: don't have it yet, I leave a link in my
+596.3s: description. On this chart, I'm on the
+598.5s: 15-minute time frame. I zoom out to the
+600.9s: 4-hour first and I can see the market
+603.2s: has been moving up. So the big picture
+605.5s: is bullish. Back on the 15-minute, this
+608.8s: is what I'm looking for. Here we have a
+610.7s: strong push up, and after the push,
+613.2s: price starts moving sideways. This is a
+615.9s: P. I draw the zone from the high of the
+618.4s: range to the low of the range.
+620.7s: touch here, a second touch here, and a
+623.3s: third touch here. Now the range is valid
+626.5s: for me.
+627.4s: Then this happens.
+629.5s: This candle breaks below the zone. A
+632.0s: beginner would sell this. I don't.
+635.1s: I wait and look at the next candle. It
+638.2s: closes back inside the range. The
+640.8s: sellers tried and they failed. This is
+643.9s: the trade Patrick loves most. I place a
+646.5s: buy limit order right at the lower edge
+648.5s: of the zone, and my stop goes just below
+650.9s: the low of the fake breakout. A very
+653.0s: small stop.
+654.4s: Price fills my order and starts moving
+656.3s: up. I don't close at the top of the
+658.2s: range because when the market wanted to
+660.0s: go down and could not, it often goes up
+662.6s: with force. My first target is the edge
+665.2s: of the next fair value area above us.
+667.9s: And look at this. A few candles later,
+670.2s: and we're there. The risk to reward on
+672.5s: this trade is incredible because the
+674.5s: stop was tiny and the move was big.
+677.7s: Now let's do a short.
+679.3s: On this chart, I'm again on the
+680.6s: 15-minute time frame. Same routine as
+682.9s: before. I check the 4-hour chart first,
+685.7s: and this time the big picture is not
+687.6s: clear. The market made a strong push up
+690.0s: and then it stopped. That is exactly
+692.5s: where Patrick likes to look for a
+693.9s: counter trade.
+695.4s: Back on the 15-minute, here's the
+697.2s: impulse up. And right after it, price
+699.7s: starts moving sideways. This is a P. I
+702.9s: draw the zone from the high to the low
+704.7s: of the range. First touch here, second
+707.3s: touch here, third touch here. Now the
+710.6s: range is valid. Then price breaks above
+713.8s: the zone. A lot of traders would buy
+715.8s: this breakout. I don't. I remember what
+718.5s: Patrick said. No confirmation, no trade.
+722.0s: So I wait and watch what price does
+724.3s: next. And here it comes. Price fails to
+727.9s: continue, comes back down to the upper
+730.3s: edge of the range, and this candle
+732.1s: closes back inside the zone. The buyers
+734.9s: tried and they failed. This is my entry
+737.7s: for the short. I sell right at the upper
+740.2s: edge of the zone with my stop just above
+742.6s: the high of that fake breakout. Again, a
+745.0s: very small stop. My target is the
+747.7s: beginning of the impulse because
+749.4s: according to Patrick, that is where
+751.4s: price usually goes back to. And since
+753.8s: there are two fair value areas between
+755.7s: my entry and that level, I take a first
+758.3s: partial at the lower edge of the range.
+760.6s: I move my stop to break even and I let
+762.9s: the rest run.
+764.7s: Price drops through the range, keeps
+766.9s: going, and reaches the origin of the
+769.3s: move. Another trade with a small stop
+772.1s: and a great risk to reward. So we have
+775.2s: the two trades, the long and the short.
+777.7s: But if the strategy is so simple, why is
+780.5s: Patrick a world champion and most people
+783.6s: are not? He has a very clear answer. The
+786.9s: difference between a profitable trader
+788.8s: and a champion is consistency. A
+791.5s: profitable trader can do it once. A
+793.7s: champion does the same thing every day
+796.9s: without changing the rules out of fear
+799.0s: or greed. And he has a rule for bad
+801.5s: days, too. After three or four losses in
+804.0s: a row in the same day, he closes
+806.1s: everything and starts fresh the next
+808.1s: morning. Sometimes your head is just not
+810.5s: in the market and it's better to go.
+813.0s: Let's recap everything we learned from
+814.9s: Patrick Neil. Markets spend most of the
+817.5s: time in ranges and you trade from fair
+820.0s: value to fair value. 4-hour chart for
+822.8s: the big picture, 15-minute chart for the
+825.2s: decision. A strong push followed by a
+827.7s: range gives you a P or a B, valid only
+831.5s: after three touches. Three ways to trade
+834.2s: it, the range trade, the breakout with
+836.6s: confirmation, and the fake breakout with
+838.8s: the reclaim. The stop goes on the
+841.3s: structure. It is set before the position
+843.8s: size and it is never moved to give the
+846.4s: trade more room.
+848.2s: Targets at the next area of fair value
+850.9s: in partials or one-to-one from the
+853.3s: impulse at new highs. and the
+855.2s: psychological requirements,
+857.3s: patience to wait for the third touch,
+860.1s: discipline to close the day after three
+862.5s: or four losses, the calm to do the same
+865.4s: thing every day.
+867.3s: A bookbinder with 16-hour days, laughed
+870.3s: at by his own family, became one of the
+872.6s: most consistent competition traders in
+875.1s: the world with a strategy you can draw
+877.4s: with two letters. That's not luck. That
+880.7s: is a method executed with discipline
+883.7s: year after year.
+885.7s: Thank you all for your support, and I
+887.4s: just want to ask you to tell me in the
+888.8s: comments which market you trade the
+890.3s: most. I'm curious to know where you
+891.9s: spend your time. See you guys next time.
