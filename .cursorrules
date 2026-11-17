@@ -1,0 +1,21 @@
+# Cursor AI Rules — TradingView MCP
+
+## File Placement & Clean Root Policy
+
+All generated code, scripts, reports, and data must follow these strict directory placement rules:
+
+1. **Scripts (`scripts/`)**:
+   - All utility scripts, backtest runners, data downloaders, and analysis programs (.py, .mjs, .js, .sh, .c) must be placed in `scripts/`.
+   - Never output or save scripts directly in the root directory.
+
+2. **Reports, Data & Pine Scripts (`reports/`)**:
+   - All reports, research summaries, and documentation (.md) go to `reports/`.
+   - All backtest outputs, optimization results, and databases (.json, .csv, .bin) go to `reports/`.
+   - All TradingView Pine Script files (.pine) must be saved in `reports/`.
+   - In any code you write that saves output files, always target `reports/` (e.g. `reports/result.json`), never `./result.json`.
+
+3. **Screenshots (`screenshots/`)**:
+   - Save all captured chart images and screenshots in `screenshots/`.
+
+4. **Root Directory**:
+   - The root directory is strictly for MCP server package files (package.json, eslint config, etc.). Do not pollute the root directory.

@@ -2,6 +2,15 @@
 
 84 tools for reading and controlling a live TradingView Desktop chart via CDP (port 9222).
 
+## Strict File Placement & Workspace Organization Rules
+
+All AI assistants and agents working in this repository MUST strictly follow these rules:
+
+1. **Scripts (`scripts/`)**: All working scripts, data fetchers, backtesters, analysis scripts, and runner tools (Python `.py`, Node.js `.js`/`.mjs`, Shell `.sh`, C `.c`, etc.) MUST be placed inside the `scripts/` folder.
+2. **Reports, Data & Pine Artifacts (`reports/`)**: All reports (`.md`), backtest/simulation outputs (`.json`, `.csv`, `.bin`), historical bar datasets, and TradingView Pine Script files (`.pine`) MUST be saved inside the `reports/` folder. Always configure scripts to write to `reports/<filename>` (e.g., `open('reports/result.json', 'w')`), never to the root directory.
+3. **Screenshots (`screenshots/`)**: All captured chart images and screenshots MUST be saved in `screenshots/`.
+4. **Root Directory Cleanliness**: Keep the root directory clean. Only MCP project configuration (`package.json`, `package-lock.json`, `eslint.config.mjs`, configs, documentation) belongs in the root. Never create loose `.json`, `.csv`, `.pine`, or script files in `./`.
+
 ## Decision Tree — Which Tool When
 
 ### "What's on my chart right now?"

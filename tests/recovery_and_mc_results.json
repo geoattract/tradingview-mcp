@@ -1,0 +1,146 @@
+{
+  "recovery": [
+    {
+      "name": "1. 5m Pure Flip (80/1.4 SMA)",
+      "avg_recovery_trades": 61.916666666666664,
+      "max_recovery_trades": 566,
+      "avg_recovery_days": 4.391782407407407,
+      "max_recovery_days": 39.06944444444444,
+      "avg_recovery_bars": 819.5833333333334,
+      "max_recovery_bars": 7428
+    },
+    {
+      "name": "2. 5m Pullback All (80/1.4 SMA + ST Exit)",
+      "avg_recovery_trades": 33.5,
+      "max_recovery_trades": 117,
+      "avg_recovery_days": 13.104166666666668,
+      "max_recovery_days": 45.56944444444444,
+      "avg_recovery_bars": 449.75,
+      "max_recovery_bars": 1674
+    },
+    {
+      "name": "3. 5m Pullback + TP Dot (80/1.4 SMA)",
+      "avg_recovery_trades": 34.0,
+      "max_recovery_trades": 120,
+      "avg_recovery_days": 13.02170138888889,
+      "max_recovery_days": 45.56944444444444,
+      "avg_recovery_bars": 430.25,
+      "max_recovery_bars": 1617
+    },
+    {
+      "name": "4. 5m Overlap Pullback + TP Dot (80/1.4 SMA)",
+      "avg_recovery_trades": 5.75,
+      "max_recovery_trades": 17,
+      "avg_recovery_days": 2.5030381944444446,
+      "max_recovery_days": 6.822916666666667,
+      "avg_recovery_bars": 52.5,
+      "max_recovery_bars": 203
+    },
+    {
+      "name": "5. 2m Pure Flip (80/1.4 SMA)",
+      "avg_recovery_trades": 46.88235294117647,
+      "max_recovery_trades": 383,
+      "avg_recovery_days": 1.2656045751633989,
+      "max_recovery_days": 10.91388888888889,
+      "avg_recovery_bars": 595.1176470588235,
+      "max_recovery_bars": 4766
+    },
+    {
+      "name": "6. 2m Pullback All (80/1.4 SMA + ST Exit)",
+      "avg_recovery_trades": 16.142857142857142,
+      "max_recovery_trades": 71,
+      "avg_recovery_days": 2.659325396825397,
+      "max_recovery_days": 10.948611111111111,
+      "avg_recovery_bars": 202.28571428571428,
+      "max_recovery_bars": 883
+    },
+    {
+      "name": "7. 5m Baseline Pure Flip (10/3.0 RMA)",
+      "avg_recovery_trades": 86.0,
+      "max_recovery_trades": 190,
+      "avg_recovery_days": 17.363425925925924,
+      "max_recovery_days": 34.451388888888886,
+      "avg_recovery_bars": 3229.6666666666665,
+      "max_recovery_bars": 6742
+    }
+  ],
+  "monte_carlo": [
+    {
+      "prob_breach_2000_pct": 99.57000000000001,
+      "prob_breach_1500_pct": 100.0,
+      "prob_breach_1000_pct": 100.0,
+      "median_max_dd": 4744.349999999969,
+      "p95_max_dd": 9296.804999999971,
+      "p99_max_dd": 11913.054999999958,
+      "prob_daily_breach_1000_pct": 6.976744186046512,
+      "worst_daily_loss": -1642.5,
+      "name": "1. 5m Pure Flip (80/1.4 SMA)"
+    },
+    {
+      "prob_breach_2000_pct": 57.82000000000001,
+      "prob_breach_1500_pct": 81.24,
+      "prob_breach_1000_pct": 97.54,
+      "median_max_dd": 2190.2000000000007,
+      "p95_max_dd": 4267.799999999996,
+      "p99_max_dd": 5353.751999999991,
+      "prob_daily_breach_1000_pct": 0.0,
+      "worst_daily_loss": -772.5,
+      "name": "2. 5m Pullback All (80/1.4 SMA + ST Exit)"
+    },
+    {
+      "prob_breach_2000_pct": 51.06,
+      "prob_breach_1500_pct": 76.66,
+      "prob_breach_1000_pct": 96.63000000000001,
+      "median_max_dd": 2024.2500000000036,
+      "p95_max_dd": 4009.8199999999883,
+      "p99_max_dd": 5119.640999999996,
+      "prob_daily_breach_1000_pct": 0.0,
+      "worst_daily_loss": -772.5,
+      "name": "3. 5m Pullback + TP Dot (80/1.4 SMA)"
+    },
+    {
+      "prob_breach_2000_pct": 3.82,
+      "prob_breach_1500_pct": 13.919999999999998,
+      "prob_breach_1000_pct": 44.769999999999996,
+      "median_max_dd": 947.3500000000022,
+      "p95_max_dd": 1889.0349999999996,
+      "p99_max_dd": 2459.6419999999994,
+      "prob_daily_breach_1000_pct": 0.0,
+      "worst_daily_loss": -772.5,
+      "name": "4. 5m Overlap Pullback + TP Dot (80/1.4 SMA)"
+    },
+    {
+      "prob_breach_2000_pct": 99.51,
+      "prob_breach_1500_pct": 99.99,
+      "prob_breach_1000_pct": 100.0,
+      "median_max_dd": 5178.6999999999825,
+      "p95_max_dd": 10002.51500000001,
+      "p99_max_dd": 12560.113000000145,
+      "prob_daily_breach_1000_pct": 11.11111111111111,
+      "worst_daily_loss": -1786.3,
+      "name": "5. 2m Pure Flip (80/1.4 SMA)"
+    },
+    {
+      "prob_breach_2000_pct": 3.52,
+      "prob_breach_1500_pct": 14.11,
+      "prob_breach_1000_pct": 44.529999999999994,
+      "median_max_dd": 946.1500000000015,
+      "p95_max_dd": 1873.51,
+      "p99_max_dd": 2427.113999999999,
+      "prob_daily_breach_1000_pct": 0.0,
+      "worst_daily_loss": -617.6999999999999,
+      "name": "6. 2m Pullback All (80/1.4 SMA + ST Exit)"
+    },
+    {
+      "prob_breach_2000_pct": 100.0,
+      "prob_breach_1500_pct": 100.0,
+      "prob_breach_1000_pct": 100.0,
+      "median_max_dd": 7340.799999999981,
+      "p95_max_dd": 13794.875000000004,
+      "p99_max_dd": 16587.03900000008,
+      "prob_daily_breach_1000_pct": 9.090909090909092,
+      "worst_daily_loss": -2681.4,
+      "name": "7. 5m Baseline Pure Flip (10/3.0 RMA)"
+    }
+  ]
+}

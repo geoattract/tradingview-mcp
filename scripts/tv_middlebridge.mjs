@@ -72,9 +72,9 @@ async function getTradingViewClient() {
 }
 
 /**
- * Execute close position inside TradingView page context
+ * Execute close position inside TradingView page context (supports full flatten and partial contracts close)
  */
-async function executeClosePosition({ symbol = null, all = false }) {
+async function executeClosePosition({ symbol = null, all = false, contracts = null }) {
   const { client } = await getTradingViewClient();
 
   try {
@@ -101,15 +101,54 @@ async function executeClosePosition({ symbol = null, all = false }) {
         };
       }
 
-      // Filter target position
-      const targetSymbol = ${JSON.stringify(symbol || '')}.toUpperCase();
+      // Helper function to extract base root symbol (e.g. CME_MINI:MNQZ2026 -> MNQ, MNQ1! -> MNQ, COMEX_MINI:MGCZ2026 -> MGC)
+      function extractRoot(s) {
+        if (!s) return "";
+        let str = String(s).toUpperCase().trim();
+        if (str.includes(":")) str = str.split(":")[1];
+        // Strip continuous contract notation: 1!, 2!, !
+        str = str.replace(/[0-9]?!+$/, "");
+        // Strip futures month and year code: e.g. Z2026, H2025, M26, Z6
+        str = str.replace(/[FGHJKMNQUVXZ]\\d{1,4}$/, "");
+        return str;
+      }
+
+      // Determine active chart symbol as additional reference
+      let chartSymbol = "";
+      try {
+        const chart = window.TradingViewApi && window.TradingViewApi._activeChartWidgetWV && window.TradingViewApi._activeChartWidgetWV.value();
+        if (chart) chartSymbol = chart.symbol() || "";
+      } catch (e) {}
+
+      let targetSymbol = ${JSON.stringify(symbol || '')}.toUpperCase().trim();
+      if (targetSymbol.includes("{{") || targetSymbol.includes("}}")) {
+        targetSymbol = "";
+      }
+
       const closeAll = ${Boolean(all)};
+      const requestedQty = ${contracts !== null && !isNaN(Number(contracts)) ? Number(contracts) : 'null'};
+
+      const targetRoot = extractRoot(targetSymbol);
+      const chartRoot = extractRoot(chartSymbol);
 
       const toClose = activePositions.filter(p => {
         if (closeAll) return true;
-        if (!targetSymbol) return true; // Close first active if unspecified
+        // If account has only 1 active position, close it automatically
+        if (activePositions.length === 1) return true;
+        // If no target specified, match chart root if available, otherwise match first
+        if (!targetSymbol && !targetRoot) {
+          if (chartRoot) {
+            const pRoot = extractRoot(p.symbol);
+            return pRoot === chartRoot || pRoot.includes(chartRoot) || chartRoot.includes(pRoot);
+          }
+          return true;
+        }
         const pSym = (p.symbol || '').toUpperCase();
-        return pSym.includes(targetSymbol) || targetSymbol.includes(pSym);
+        const pRoot = extractRoot(p.symbol);
+        // Direct match, substring match, or root match
+        if (pSym === targetSymbol || pSym.includes(targetSymbol) || targetSymbol.includes(pSym)) return true;
+        if (targetRoot && (pRoot === targetRoot || pRoot.includes(targetRoot) || targetRoot.includes(pRoot))) return true;
+        return false;
       });
 
       if (toClose.length === 0) {
@@ -132,17 +171,98 @@ async function executeClosePosition({ symbol = null, all = false }) {
 
       const closed = [];
       for (const pos of toClose) {
+        const currentQty = Math.abs(pos.qty || 1);
+        const shouldPartial = !closeAll && requestedQty !== null && requestedQty > 0 && requestedQty < currentQty;
+        const qtyToClose = shouldPartial ? requestedQty : currentQty;
+
         try {
-          // Direct broker-level market close
-          if (typeof broker.closePosition === 'function') {
-            await broker.closePosition(pos.id);
+          if (shouldPartial) {
+            let partialSuccess = false;
+            // 1. Only call native broker partial close IF broker explicitly configures support
+            const supportsNativePartial = broker.config && Boolean(broker.config.supportPartialClosePosition);
+            if (supportsNativePartial && typeof broker.closePosition === 'function') {
+              try {
+                const res = await broker.closePosition(pos.id, qtyToClose);
+                if (res !== false) partialSuccess = true;
+              } catch (e) {
+                partialSuccess = false;
+              }
+            }
+            // 2. Direct Instant Offsetting Market Order (Universal standard for Tradovate, IBKR, etc.)
+            if (!partialSuccess) {
+              // Determine opposite side to scale down:
+              // In TradingView positions, pos.side is 1 for Long, -1 for Short (qty is unsigned positive).
+              // To scale down a Short (pos.side === -1), we must BUY (side: 1).
+              // To scale down a Long (pos.side === 1), we must SELL (side: -1).
+              const isShort = pos.side === -1 || Number(pos.qty) < 0;
+              const oppSide = isShort ? 1 : -1; // 1 = Buy (cover Short), -1 = Sell (reduce Long)
+              const orderSpec = {
+                symbol: pos.symbol,
+                type: 2, // 2 = Market Order in TradingView (1 = Limit, 2 = Market, 3 = Stop)
+                side: oppSide,
+                qty: qtyToClose
+              };
+              let placed = false;
+
+              // Step A: Primary instant execution via broker context send (exact TradingView instant button equivalent)
+              if (typeof broker.createPlaceOrderContext === 'function') {
+                try {
+                  const ctx = await broker.createPlaceOrderContext({ order: orderSpec, source: "instant", isDisposable: true });
+                  if (ctx && typeof ctx.send === 'function') {
+                    await ctx.send();
+                    placed = true;
+                  }
+                } catch (e) {
+                  placed = false;
+                }
+              }
+
+              // Step B: Direct broker adapter placeOrder fallback
+              if (!placed && typeof broker.placeOrder === 'function') {
+                try {
+                  await broker.placeOrder(orderSpec);
+                  placed = true;
+                } catch (e) {
+                  placed = false;
+                }
+              }
+
+              // Step C: Trading service createOrder fallback
+              if (!placed && typeof t.createOrder === 'function') {
+                try {
+                  await t.createOrder(orderSpec);
+                  placed = true;
+                } catch (e) {
+                  placed = false;
+                }
+              }
+
+              if (!placed) {
+                throw new Error("Failed to transmit partial market order for " + pos.symbol);
+              }
+            }
           } else {
-            await bc.closePosition(pos.id);
+            // Full position close
+            if (typeof broker.closePosition === 'function') {
+              await broker.closePosition(pos.id);
+            } else {
+              await bc.closePosition(pos.id);
+            }
           }
         } catch (err) {
-          await bc.closePosition(pos.id);
+          if (!shouldPartial) {
+            await bc.closePosition(pos.id);
+          }
         }
-        closed.push({ id: pos.id, symbol: pos.symbol, qty: pos.qty, side: pos.side, avgPrice: pos.avgPrice });
+        closed.push({
+          id: pos.id,
+          symbol: pos.symbol,
+          closedQty: qtyToClose,
+          remainingQty: currentQty - qtyToClose,
+          isPartial: shouldPartial,
+          side: pos.side,
+          avgPrice: pos.avgPrice
+        });
       }
 
       // Safety Layer: Auto-click any confirmation dialog button if one appeared in the UI
@@ -157,18 +277,20 @@ async function executeClosePosition({ symbol = null, all = false }) {
         }
       }
 
-      // Also cancel open working bracket orders for these symbols
-      try {
-        if (typeof bc.cancelOrders === 'function') {
-          await bc.cancelOrders();
+      // If full flatten, also cancel open working bracket orders for these symbols
+      if (closeAll || (requestedQty === null)) {
+        try {
+          if (typeof bc.cancelOrders === 'function') {
+            await bc.cancelOrders();
+          }
+        } catch (err) {
+          // Non-critical if cancelOrders fails
         }
-      } catch (err) {
-        // Non-critical if cancelOrders fails
       }
 
       return {
         success: true,
-        actionTaken: "closed",
+        actionTaken: closed.some(c => c.isPartial) ? "partial_close" : "closed",
         broker: brokerTitle,
         closedPositions: closed
       };
@@ -354,19 +476,38 @@ const server = http.createServer(async (req, res) => {
       console.log(`📥 [${new Date().toLocaleTimeString()}] WEBHOOK RECEIVED:`, JSON.stringify(payload));
 
       const action = (payload.action || url.searchParams.get('action') || 'close').toLowerCase();
-      const symbol = payload.symbol || payload.ticker || url.searchParams.get('symbol') || null;
+      let symbol = payload.symbol || payload.ticker || url.searchParams.get('symbol') || null;
+      // If symbol is an unexpanded TradingView template tag like "{{ticker}}" from URL query
+      if (symbol && (symbol.includes('{{') || symbol.includes('}}'))) {
+        symbol = null;
+      }
+      // If symbol is missing or null, try extracting from raw text payload (e.g. "MNQ1! Crossing Down...")
+      if (!symbol && payload.raw && typeof payload.raw === 'string') {
+        const rawMatch = payload.raw.trim().match(/^([A-Za-z0-9:_!]+)/);
+        if (rawMatch) {
+          symbol = rawMatch[1];
+        }
+      }
+      const contractsParam = payload.contracts ?? payload.qty ?? url.searchParams.get('contracts') ?? url.searchParams.get('qty') ?? null;
+      const contracts = (contractsParam !== null && !isNaN(Number(contractsParam))) ? Number(contractsParam) : null;
       const all = payload.all === true || action === 'flatten_all' || url.searchParams.get('all') === 'true';
 
       if (action === 'close' || action === 'flatten' || action === 'flatten_all') {
         try {
-          console.log(`⚡ Executing ${action} for symbol: ${symbol || 'ALL'}...`);
-          const result = await executeClosePosition({ symbol, all });
+          console.log(`⚡ Executing ${action} for symbol: ${symbol || 'ALL'} | Contracts: ${contracts !== null ? contracts : 'ALL'}...`);
+          const result = await executeClosePosition({ symbol, all, contracts });
           console.log('✅ Result:', JSON.stringify(result, null, 2));
 
           const closedCount = result.closedPositions ? result.closedPositions.length : 0;
-          const msg = closedCount > 0 
-            ? `Flattened ${closedCount} position(s) on ${result.broker}!` 
-            : `No matching positions to close.`;
+          let msg = `No matching positions to close.`;
+          if (closedCount > 0) {
+            const first = result.closedPositions[0];
+            if (first.isPartial) {
+              msg = `Partially closed ${first.closedQty} contract(s) on ${first.symbol}! (${first.remainingQty} remaining)`;
+            } else {
+              msg = `Flattened ${first.closedQty || closedCount} position(s) on ${result.broker}!`;
+            }
+          }
 
           sendMacNotification('Antigravity Trading Bridge', 'Webhook Triggered', msg);
           playSound(closedCount > 0 ? 'Glass' : 'Ping');

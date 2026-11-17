@@ -1,0 +1,265 @@
+{
+  "evaluation_period": {
+    "start_utc": "2026-10-01T00:00:00Z",
+    "end_utc": "2026-11-13T21:55:00Z",
+    "symbol": "COMEX_MINI:MGC1!",
+    "timeframe": "5m",
+    "total_bars_evaluated": 8808
+  },
+  "supertrend_results": [
+    {
+      "title": "SuperTrend V2 (ATR 80, Mult 1.7)",
+      "total_trades": 530,
+      "win_rate": 34.3,
+      "total_pnl_pts": -145.5,
+      "total_pnl_usd": -1455.0,
+      "profit_factor": 0.94,
+      "max_drawdown_usd": 5312.0,
+      "avg_trade_bars": 16.6,
+      "avg_trade_hours": 1.4,
+      "gross_win_usd": 23237.0,
+      "gross_loss_usd": 24692.0
+    },
+    {
+      "title": "SuperTrend V2 (ATR 80, Mult 2.2)",
+      "total_trades": 346,
+      "win_rate": 37.9,
+      "total_pnl_pts": 333.9,
+      "total_pnl_usd": 3339.0,
+      "profit_factor": 1.19,
+      "max_drawdown_usd": 4663.0,
+      "avg_trade_bars": 25.8,
+      "avg_trade_hours": 2.1,
+      "gross_win_usd": 21256.0,
+      "gross_loss_usd": 17917.0
+    }
+  ],
+  "crsi_results": [
+    {
+      "title": "cRSI Univ V5 [EXTENSIONS] (L=6, R=3, ATR=3.0x, crsiFilter=ON)",
+      "total_trades": 399,
+      "win_rate": 66.9,
+      "total_pnl_pts": 1292.2,
+      "total_pnl_usd": 12922.0,
+      "profit_factor": 2.83,
+      "max_drawdown_usd": 1216.0,
+      "avg_trade_bars": 13.2,
+      "avg_trade_hours": 1.1,
+      "gross_win_usd": 19968.0,
+      "gross_loss_usd": 7046.0,
+      "total_dots": 630
+    },
+    {
+      "title": "cRSI Univ V5 [EXTENSIONS] (L=6, R=3, ATR=3.0x, crsiFilter=OFF)",
+      "total_trades": 493,
+      "win_rate": 61.9,
+      "total_pnl_pts": 1215.8,
+      "total_pnl_usd": 12158.0,
+      "profit_factor": 2.35,
+      "max_drawdown_usd": 625.0,
+      "avg_trade_bars": 11.2,
+      "avg_trade_hours": 0.9,
+      "gross_win_usd": 21154.0,
+      "gross_loss_usd": 8996.0,
+      "total_dots": 721
+    },
+    {
+      "title": "cRSI Univ V5 [STRICT_ALT] (L=6, R=3, ATR=3.0x, crsiFilter=ON)",
+      "total_trades": 399,
+      "win_rate": 51.9,
+      "total_pnl_pts": -453.2,
+      "total_pnl_usd": -4532.0,
+      "profit_factor": 0.78,
+      "max_drawdown_usd": 5317.0,
+      "avg_trade_bars": 22.1,
+      "avg_trade_hours": 1.8,
+      "gross_win_usd": 16360.0,
+      "gross_loss_usd": 20892.0,
+      "total_dots": 398
+    },
+    {
+      "title": "cRSI Univ V5 [EXTENSIONS] (L=10, R=5, ATR=3.0x, crsiFilter=ON)",
+      "total_trades": 393,
+      "win_rate": 53.7,
+      "total_pnl_pts": 912.6,
+      "total_pnl_usd": 9126.0,
+      "profit_factor": 1.84,
+      "max_drawdown_usd": 1302.0,
+      "avg_trade_bars": 15.6,
+      "avg_trade_hours": 1.3,
+      "gross_win_usd": 20011.0,
+      "gross_loss_usd": 10885.0,
+      "total_dots": 544
+    },
+    {
+      "title": "cRSI Univ V5 [STRICT_ALT] (L=8, R=5, ATR=1.5x, crsiFilter=OFF)",
+      "total_trades": 653,
+      "win_rate": 49.3,
+      "total_pnl_pts": 175.8,
+      "total_pnl_usd": 1758.0,
+      "profit_factor": 1.08,
+      "max_drawdown_usd": 3377.0,
+      "avg_trade_bars": 13.5,
+      "avg_trade_hours": 1.1,
+      "gross_win_usd": 23730.0,
+      "gross_loss_usd": 21972.0,
+      "total_dots": 652
+    }
+  ],
+  "empirical_pivot_right_study": [
+    {
+      "left": 6,
+      "right": 1,
+      "delay_mins": 5,
+      "total_pivots": 1861,
+      "pct_survived_10_bars": 36.6,
+      "pct_survived_20_bars": 26.1,
+      "avg_lag_pts": 4.39,
+      "avg_lag_usd": 43.86,
+      "avg_mfe_20b_pts": 10.14
+    },
+    {
+      "left": 6,
+      "right": 2,
+      "delay_mins": 10,
+      "total_pivots": 1436,
+      "pct_survived_10_bars": 44.9,
+      "pct_survived_20_bars": 32.9,
+      "avg_lag_pts": 5.71,
+      "avg_lag_usd": 57.05,
+      "avg_mfe_20b_pts": 10.23
+    },
+    {
+      "left": 6,
+      "right": 3,
+      "delay_mins": 15,
+      "total_pivots": 1231,
+      "pct_survived_10_bars": 50.6,
+      "pct_survived_20_bars": 37.2,
+      "avg_lag_pts": 6.57,
+      "avg_lag_usd": 65.71,
+      "avg_mfe_20b_pts": 10.01
+    },
+    {
+      "left": 6,
+      "right": 4,
+      "delay_mins": 20,
+      "total_pivots": 1071,
+      "pct_survived_10_bars": 55.6,
+      "pct_survived_20_bars": 42.0,
+      "avg_lag_pts": 7.38,
+      "avg_lag_usd": 73.84,
+      "avg_mfe_20b_pts": 10.12
+    },
+    {
+      "left": 6,
+      "right": 5,
+      "delay_mins": 25,
+      "total_pivots": 951,
+      "pct_survived_10_bars": 60.8,
+      "pct_survived_20_bars": 46.5,
+      "avg_lag_pts": 8.24,
+      "avg_lag_usd": 82.43,
+      "avg_mfe_20b_pts": 10.25
+    },
+    {
+      "left": 6,
+      "right": 6,
+      "delay_mins": 30,
+      "total_pivots": 880,
+      "pct_survived_10_bars": 63.3,
+      "pct_survived_20_bars": 49.4,
+      "avg_lag_pts": 8.95,
+      "avg_lag_usd": 89.51,
+      "avg_mfe_20b_pts": 10.29
+    },
+    {
+      "left": 6,
+      "right": 7,
+      "delay_mins": 35,
+      "total_pivots": 830,
+      "pct_survived_10_bars": 65.4,
+      "pct_survived_20_bars": 50.7,
+      "avg_lag_pts": 9.61,
+      "avg_lag_usd": 96.05,
+      "avg_mfe_20b_pts": 10.07
+    },
+    {
+      "left": 10,
+      "right": 1,
+      "delay_mins": 5,
+      "total_pivots": 1463,
+      "pct_survived_10_bars": 38.3,
+      "pct_survived_20_bars": 27.5,
+      "avg_lag_pts": 4.54,
+      "avg_lag_usd": 45.38,
+      "avg_mfe_20b_pts": 10.18
+    },
+    {
+      "left": 10,
+      "right": 2,
+      "delay_mins": 10,
+      "total_pivots": 1148,
+      "pct_survived_10_bars": 46.4,
+      "pct_survived_20_bars": 33.9,
+      "avg_lag_pts": 5.8,
+      "avg_lag_usd": 58.03,
+      "avg_mfe_20b_pts": 10.33
+    },
+    {
+      "left": 10,
+      "right": 3,
+      "delay_mins": 15,
+      "total_pivots": 985,
+      "pct_survived_10_bars": 52.4,
+      "pct_survived_20_bars": 38.2,
+      "avg_lag_pts": 6.8,
+      "avg_lag_usd": 68.01,
+      "avg_mfe_20b_pts": 9.99
+    },
+    {
+      "left": 10,
+      "right": 4,
+      "delay_mins": 20,
+      "total_pivots": 862,
+      "pct_survived_10_bars": 57.2,
+      "pct_survived_20_bars": 42.9,
+      "avg_lag_pts": 7.66,
+      "avg_lag_usd": 76.6,
+      "avg_mfe_20b_pts": 9.98
+    },
+    {
+      "left": 10,
+      "right": 5,
+      "delay_mins": 25,
+      "total_pivots": 768,
+      "pct_survived_10_bars": 62.0,
+      "pct_survived_20_bars": 47.1,
+      "avg_lag_pts": 8.51,
+      "avg_lag_usd": 85.11,
+      "avg_mfe_20b_pts": 10.08
+    },
+    {
+      "left": 10,
+      "right": 6,
+      "delay_mins": 30,
+      "total_pivots": 713,
+      "pct_survived_10_bars": 64.4,
+      "pct_survived_20_bars": 50.1,
+      "avg_lag_pts": 9.19,
+      "avg_lag_usd": 91.93,
+      "avg_mfe_20b_pts": 10.08
+    },
+    {
+      "left": 10,
+      "right": 7,
+      "delay_mins": 35,
+      "total_pivots": 675,
+      "pct_survived_10_bars": 66.1,
+      "pct_survived_20_bars": 51.1,
+      "avg_lag_pts": 9.83,
+      "avg_lag_usd": 98.28,
+      "avg_mfe_20b_pts": 9.89
+    }
+  ]
+}

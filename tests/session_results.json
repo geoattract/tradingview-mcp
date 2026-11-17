@@ -1,0 +1,26 @@
+{
+  "Asian": {
+    "trades": 142,
+    "win_rate": 64.8,
+    "net_pnl_usd": 3883.0,
+    "profit_factor": 2.19
+  },
+  "London": {
+    "trades": 101,
+    "win_rate": 69.3,
+    "net_pnl_usd": 3874.0,
+    "profit_factor": 3.81
+  },
+  "US_NY": {
+    "trades": 108,
+    "win_rate": 71.3,
+    "net_pnl_usd": 4237.0,
+    "profit_factor": 3.9
+  },
+  "Evening_Off": {
+    "trades": 47,
+    "win_rate": 57.4,
+    "net_pnl_usd": 847.0,
+    "profit_factor": 1.91
+  }
+}
