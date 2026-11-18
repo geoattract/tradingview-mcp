@@ -1,5 +1,17 @@
 # Cursor AI Rules — TradingView MCP
 
+## Strict TradingView Tool Usage & Screenshot Restrictions
+
+1. **NO Autonomous TradingView Probing**:
+   - Do NOT query TradingView Desktop or invoke TradingView MCP tools unless the user explicitly requests chart inspection or interaction.
+2. **NEVER Take Screenshots (Printscreen) Unless Explicitly Asked**:
+   - NEVER call `capture_screenshot` or attempt to take a chart snapshot unless the user explicitly commands it (e.g., "take a screenshot", "printscreen", "show me a picture of the chart").
+   - Do NOT take screenshots as an automatic "visual confirmation", "verification", or context-gathering step.
+3. **No Unsolicited Multi-Step Calculations or Heavy Audits**:
+   - When asked to inspect something on TradingView, retrieve ONLY the specific piece of data requested (e.g. just the quote or a specific indicator).
+   - Do NOT autonomously chain multiple tools, scrape all indicators, pull hundreds of historical bars, or compute unsolicited mathematical calculations/metrics.
+   - Keep answers direct, fast, and scoped strictly to the user's question without taking long times.
+
 ## File Placement & Clean Root Policy
 
 All generated code, scripts, reports, and data must follow these strict directory placement rules:

@@ -40,12 +40,12 @@ Use drawing tools to mark up the chart:
 - `draw_shape` with `trend_line` for trend channels (needs two points)
 - `draw_shape` with `text` for annotations
 
-## Step 5: Capture and Analyze
+## Step 5: Data and Analysis (No Unsolicited Screenshots)
 
-1. `capture_screenshot` — screenshot the annotated chart
-2. `data_get_ohlcv` — pull recent price data for quantitative analysis
-3. `quote_get` — get the current real-time price
-4. `symbol_info` — get symbol metadata (exchange, type, session)
+1. `data_get_ohlcv` with `summary: true` — price action summary (only if requested)
+2. `quote_get` — current price
+3. `symbol_info` — symbol metadata (if relevant)
+*(Note: Do NOT call `capture_screenshot` unless the user explicitly requested a screenshot or chart image).*
 
 ## Step 6: Report
 

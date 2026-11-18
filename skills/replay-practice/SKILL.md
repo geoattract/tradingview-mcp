@@ -18,7 +18,7 @@ You are guiding the user through replay-mode practice trading on TradingView.
 Before stepping through bars:
 1. `data_get_ohlcv` — get the historical context leading up to the replay point
 2. Add any indicators the user wants: `chart_manage_indicator`
-3. `capture_screenshot` — show the starting chart state
+*(Note: Do not take a screenshot unless explicitly requested by the user).*
 
 ## Step 3: Step Through Bars
 
@@ -42,8 +42,7 @@ When the user wants to exit:
 
 After the practice session:
 1. `replay_status` — final P&L summary
-2. `capture_screenshot` — capture the final chart state
-3. `replay_stop` — exit replay mode
+2. `replay_stop` — exit replay mode (Do NOT take a screenshot unless explicitly asked)
 
 Report:
 - Total trades taken

@@ -2,6 +2,20 @@
 
 84 tools for reading and controlling a live TradingView Desktop chart via CDP (port 9222).
 
+## Strict TradingView Tool Usage & Screenshot Restrictions
+
+To prevent unnecessary latency, excessive tool chaining, and unwanted actions:
+
+1. **NO Autonomous TradingView Probing**:
+   - Do **NOT** connect to TradingView Desktop or call TradingView MCP tools (`chart_*`, `data_*`, `quote_get`, etc.) unless the user explicitly requests chart inspection or interaction.
+2. **NEVER Take Screenshots (Printscreen) Unless Explicitly Asked**:
+   - **NEVER** call `capture_screenshot` or attempt to take a screenshot unless the user explicitly asks for one (e.g., "take a screenshot", "printscreen", "show me a chart screenshot").
+   - Do **NOT** use screenshots as an automatic "visual confirmation", "verification", or context-gathering step.
+3. **No Unsolicited Multi-Step Calculations / Audits**:
+   - When asked to inspect something on TradingView, retrieve **only the specific piece of data requested** (e.g., just the current quote, or a single specific indicator reading).
+   - Do **NOT** autonomously chain 5–10 tools, pull large sets of historical bars, or compute unsolicited mathematical models and calculations.
+   - Keep actions minimal, fast, and directly scoped to the user's prompt.
+
 ## Strict File Placement & Workspace Organization Rules
 
 All AI assistants and agents working in this repository MUST strictly follow these rules:
@@ -33,14 +47,14 @@ Use `study_filter` parameter to target a specific indicator by name substring (e
 - `data_get_ohlcv` without summary → all bars (use `count` to limit, default 100)
 - `quote_get` → single latest price snapshot
 
-### "Analyze my chart" (full report workflow)
+### "Analyze my chart" (Only when explicitly requested by user)
 1. `quote_get` → current price
 2. `data_get_study_values` → all indicator readings
 3. `data_get_pine_lines` → key price levels from custom indicators
 4. `data_get_pine_labels` → labeled levels with context (e.g., "Settlement", "ASN O/U")
 5. `data_get_pine_tables` → session stats, analytics tables
 6. `data_get_ohlcv` with `summary: true` → price action summary
-7. `capture_screenshot` → visual confirmation
+*(Note: Never take a screenshot as part of chart analysis unless the user explicitly requested a screenshot).*
 
 ### "Change the chart"
 - `chart_set_symbol` → switch ticker (e.g., "AAPL", "ES1!", "NYMEX:CL1!")
@@ -102,7 +116,7 @@ These tools can return large payloads. Follow these rules to avoid context bloat
 3. **Never use `verbose: true`** on pine tools unless the user specifically asks for raw drawing data with IDs/colors
 4. **Avoid calling `pine_get_source`** on complex scripts — it can return 200KB+. Only read if you need to edit the code.
 5. **Avoid calling `data_get_indicator`** on protected/encrypted indicators — their inputs are encoded blobs. Use `data_get_study_values` instead for current values.
-6. **Use `capture_screenshot`** for visual context instead of pulling large datasets — a screenshot is ~300KB but gives you the full visual picture
+6. **Never call `capture_screenshot`** unless explicitly requested by the user — do not take screenshots automatically for visual context or confirmation
 7. **Call `chart_get_state` once** at the start to get entity IDs, then reference them — don't re-call repeatedly
 8. **Cap your OHLCV requests** — `count: 20` for quick analysis, `count: 100` for deeper work, `count: 500` only when specifically needed
 

@@ -63,9 +63,8 @@ Common Pine Script errors:
 ## Step 6: Verify on Chart
 
 After clean compilation:
-1. `capture_screenshot` — take a screenshot to verify it looks right
-2. `data_get_strategy_results` — if it's a strategy, check performance
-3. Show the user the results
+1. `data_get_strategy_results` — if it's a strategy, check performance
+2. Show the user the results (Do NOT take a screenshot unless explicitly asked by the user)
 
 ## Step 7: Iterate
 

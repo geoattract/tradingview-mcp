@@ -2,6 +2,20 @@
 
 This file provides instructions for all AI agents, assistants, and automated systems (including Antigravity, Gemini, OpenAI Codex, Cline, and other autonomous agents) operating within this repository.
 
+## Strict TradingView Tool Usage & Screenshot Restrictions
+
+To prevent unnecessary delays, high latency, and unrequested background actions:
+
+1. **NO Autonomous TradingView Probing**:
+   - Do **NOT** query TradingView Desktop or call TradingView MCP tools (`chart_*`, `data_*`, `quote_get`, etc.) unless the user explicitly asks to inspect or interact with TradingView.
+2. **NEVER Take Screenshots (Printscreen) Unless Explicitly Asked**:
+   - **DO NOT** call `capture_screenshot` or trigger printscreen unless the user explicitly requests an image/screenshot (e.g., "take a screenshot", "printscreen", "show me a picture of the chart").
+   - Never take screenshots as an automatic "visual confirmation", "verification", or routine step.
+3. **No Unsolicited Multi-Step Calculations or Heavy Audits**:
+   - When the user asks to check something on TradingView, retrieve **only the specific piece of data requested** (e.g., just the quote, or just a specific indicator).
+   - Do **NOT** autonomously chain multiple tools, scrape all indicators, pull hundreds of historical bars, or compute unsolicited mathematical calculations/metrics.
+   - Keep answers direct, fast, and scoped strictly to the user's question.
+
 ## Strict Workspace Organization & File Placement Rules
 
 To prevent repository clutter and keep the project structured, all AI agents MUST strictly adhere to the following file placement rules:

@@ -16,10 +16,11 @@ Collect all available performance data:
 4. `chart_get_state` — current symbol, timeframe, and studies on chart
 5. `symbol_info` — symbol metadata for context
 
-## Step 2: Capture Visuals
+## Step 2: Visuals (ONLY if requested)
 
-1. `capture_screenshot` with region "chart" — the chart with strategy overlay
-2. `capture_screenshot` with region "strategy_tester" — the Strategy Tester panel
+Do NOT call `capture_screenshot` unless the user explicitly requested a screenshot. If requested:
+1. `capture_screenshot` with region "chart" — chart overlay
+2. `capture_screenshot` with region "strategy_tester" — Strategy Tester panel
 
 ## Step 3: Analyze
 
